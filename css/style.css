@@ -17,7 +17,8 @@ body {
 }
 
 body {
-    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    background: #050404 ;
+    color: #ffffff;
     font-family: 'Coda', cursive;
 }
 
@@ -79,6 +80,9 @@ h1 {
     cursor: default;
     background: #02ccba;
     font-size: 33px;
+}
+.deck .card.desable {
+    pointer-events: none;
 }
 
 /*
