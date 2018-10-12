@@ -111,3 +111,52 @@ h1 {
     float: right;
     cursor: pointer;
 }
+/* edn box*/
+.rate-container{
+    visibility: hidden;
+    border-color: white;
+    border: 1px solid;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(14, 19, 18);
+    color: white;
+    height: 250px;
+}
+.score {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.score .score-stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score .score-stars li {
+    list-style: none;
+    display: inline-block;
+}
+.new{
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 1;
+}
+.h1-score{
+    margin-top: 50px;
+}
+.button {
+    margin-top: 30px;
+    padding: 5px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    color: white;
+    border-radius: 10%;
+}
