@@ -149,6 +149,7 @@ h1 {
     right: 0px;
     left: 0px;
     z-index: 1;
+    visibility: visible;
 }
 .h1-score{
     margin-top: 50px;

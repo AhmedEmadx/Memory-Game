@@ -1,5 +1,7 @@
 (function(){
+    //to test my function 
     "use strict";
+    // to make star in your rate
     const stars = document.querySelector('.stars');
     const star = `<li><i class="fa fa-star"></i></li>`;
     function rating() {
@@ -12,6 +14,7 @@
             break;
         }
     }
+
     //add move
     const movesContainer = document.querySelector(".moves");
     let moves = 0;
@@ -22,7 +25,7 @@
         rating();
     }
 
-    //timer
+    //make timer
     const timerContainers = document.querySelector('.timer');
         let liveTimer, totalSeconds = 0;  
         let firstClick = true; 
@@ -34,6 +37,7 @@
             timerContainers.innerHTML = totalSeconds;
         }, 1000)
     }
+    //stop timer
     function stopTimer() {
         clearInterval(liveTimer);
     }
@@ -60,7 +64,8 @@
     }
 
     //list of cards
-    const icons = [ 'fa fa-music', 'fa fa-space-shuttle', 'fa fa-terminal', 'fa fa-code', 'fa fa-headphones', 'fa fa-bug', 'fa fa-magic', 'fa fa-rocket', 'fa fa-music', 'fa fa-space-shuttle', 'fa fa-terminal', 'fa fa-code', 'fa fa-headphones', 'fa fa-bug', 'fa fa-magic', 'fa fa-rocket'];
+    const y = [ 'fa-music', 'fa-space-shuttle', 'fa-terminal', 'fa-code', 'fa-headphones', 'fa-bug', 'fa-magic', 'fa-rocket'];
+    const icons = y.concat(y);
 
     // to call list class in html 
     const cardContainer = document.querySelector('.deck');
@@ -75,7 +80,7 @@
         for (let i = 0; i < cards.length; i++) {
             const card = document.createElement('li');
                 card.classList.add('card');
-                card.innerHTML = `<i class="${cards[i]}"></i>`;
+                card.innerHTML = `<i class="fa ${cards[i]}"></i>`;
                 cardContainer.appendChild(card);
                 click(card);
             }
@@ -141,7 +146,7 @@
     function endContainer(){
       const rate = document.querySelector(".rate-container");
       rate.classList.add('new');
-      rate.style.visibility =  "visible";
+      
     }
 
     //score box
