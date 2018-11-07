@@ -5,13 +5,12 @@
     const stars = document.querySelector('.stars');
     const star = `<li><i class="fa fa-star"></i></li>`;
     function rating() {
-        switch (moves) {
-            case 18:
+        if (moves === 18) {
             stars.innerHTML = star + star;
-            break;
-            case 25:
+        } else if (moves === 25) {
             stars.innerHTML = star;
-            break;
+        } else {
+            stars.inerHTML = star + star+ star;
         }
     }
 
@@ -140,6 +139,7 @@
         if(matched.length === icons.length){
             clearInterval(liveTimer);
             endContainer();
+            scoreRate();
         }
     }
     
@@ -152,7 +152,7 @@
     //score box
     function scoreRate(){  
         let scoreStars = document.querySelector(".score-stars");
-        scoreStars.innerHTML = star + star + star;
+        scoreStars.innerHTML = star + star;
         let scoreMoves = document.querySelector(".score-moves");
         scoreMoves.innerHTML = ` Most move is 10 , `;
         let scoreTime = document.querySelector(".score-time");
@@ -170,7 +170,7 @@
             rate.classList.remove('new');
         });
     }
-    scoreRate();
+    
     // Shuffle function from http://stackoverflow.com/a/2450976
     function shuffle(array) {
         var currentIndex = array.length, temporaryValue, randomIndex;
